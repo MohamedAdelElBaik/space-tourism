@@ -249,6 +249,8 @@ button {
   place-items: center;
   padding-inline: 1em;
   aspect-ratio: 1;
+  border: 0;
+  cursor: pointer;
   border-radius: 50%;
   text-decoration: none;
   z-index: 1;
