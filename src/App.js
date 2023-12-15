@@ -2,7 +2,7 @@ import "./index.css";
 import logo from "./images/group-2.svg";
 import Nav from "./components/Nav";
 import { useState } from "react";
-// import HomeContent from "./components/HomeContent";
+import HomeContent from "./components/HomeContent";
 
 function App() {
   const [navResult, setNavResult] = useState("home");
@@ -13,7 +13,7 @@ function App() {
         <Logo />
         <Nav setNavResult={setNavResult} />
       </Header>
-      {/* {navResult === "home" && <HomeContent />} */}
+      {navResult === "home" && <HomeContent />}
     </div>
   );
 }
