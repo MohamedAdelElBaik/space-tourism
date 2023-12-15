@@ -1,0 +1,17 @@
+.app {
+  background: no-repeat;
+  background-size: cover;
+  background-image: url("./images/bitmap.svg");
+  height: 100svh;
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+}
+
+.nav--logo {
+  margin-left: 60px;
+}
+
+.home--content {
+  padding-left: 15%;
+  padding-right: 20%;
+}
