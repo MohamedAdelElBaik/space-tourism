@@ -1,4 +1,4 @@
-function HomeContent() {
+function Home() {
   return (
     <>
       <ArticleContent>
@@ -32,7 +32,7 @@ function Header() {
 }
 function Paragraph() {
   return (
-    <p className="letter-spacing-3" style={{ lineHeight: "2rem" }}>
+    <p className="text-box letter-spacing-3" style={{ lineHeight: "2rem" }}>
       Let’s face it; if you want to go to space, you might as well genuinely go
       to outer space and not hover kind of on the edge of it. Well sit back, and
       relax because we’ll give you a truly out of this world experience!
@@ -50,4 +50,4 @@ function ExploreButton() {
   );
 }
 
-export default HomeContent;
+export default Home;
