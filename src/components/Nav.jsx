@@ -1,4 +1,4 @@
-function Nav({ setNavResult }) {
+function Nav({ navResult, setNavResult }) {
   const listItemContent = [
     ["0", "home"],
     ["1", "destination"],
@@ -10,7 +10,11 @@ function Nav({ setNavResult }) {
     <nav>
       <List>
         {listItemContent.map((item) => (
-          <ListItem num={item[0]} setNavResult={setNavResult}>
+          <ListItem
+            className={navResult === item[1] ? "active" : ""}
+            num={item[0]}
+            setNavResult={setNavResult}
+          >
             {item[1]}
           </ListItem>
         ))}
@@ -33,9 +37,9 @@ function List({ children }) {
   );
 }
 
-function ListItem({ children, num, setNavResult }) {
+function ListItem({ children, num, setNavResult, className }) {
   return (
-    <li onClick={() => setNavResult(children)}>
+    <li className={className} onClick={() => setNavResult(children)}>
       <span className="mar-r">0{num}</span>
       {children}
     </li>
