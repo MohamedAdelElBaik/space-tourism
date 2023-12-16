@@ -7,7 +7,7 @@ function Nav({ navResult, setNavResult }) {
   ];
 
   return (
-    <nav>
+    <nav className="nav-bar-container fs--300">
       <List>
         {listItemContent.map((item) => (
           <ListItem
@@ -25,22 +25,14 @@ function Nav({ navResult, setNavResult }) {
 
 function List({ children }) {
   return (
-    <ul
-      className="primary-navigation underline-indicators uppercase lsn flex"
-      style={{
-        backgroundColor: "hsl(var(--clr-white)/0.08)",
-        "--gap": "4rem",
-      }}
-    >
-      {children}
-    </ul>
+    <ul className="nav-bar underline-indicators uppercase lsn">{children}</ul>
   );
 }
 
 function ListItem({ children, num, setNavResult, className }) {
   return (
     <li className={className} onClick={() => setNavResult(children)}>
-      <span className="mar-r">0{num}</span>
+      <span className="nav-bar--item--num mar-r">0{num}</span>
       {children}
     </li>
   );

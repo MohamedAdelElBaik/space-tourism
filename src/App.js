@@ -25,26 +25,19 @@ function App() {
 }
 
 function Header({ children }) {
-  return (
-    <header
-      className="app-header flex"
-      style={{ justifyContent: "space-between", alignItems: "center" }}
-    >
-      {children}
-    </header>
-  );
+  return <header className="app-header">{children}</header>;
 }
 
 function Logo() {
   return (
     <div>
-      <img className="nav--logo" src={logo} alt="logo"></img>
+      <img className="app--header--logo" src={logo} alt="logo"></img>
     </div>
   );
 }
 
 function Section({ children }) {
-  return <section className="page--content">{children}</section>;
+  return <section className="app--content">{children}</section>;
 }
 
 export default App;

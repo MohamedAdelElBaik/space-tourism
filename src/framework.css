@@ -6,7 +6,7 @@
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
-  
+
   /* font-sizes */
   --fs-900: 5rem;
   --fs-800: 3.5rem;
@@ -16,7 +16,7 @@
   --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
-  
+
   /* font-families */
   --ff-serif: "Bellefair", serif;
   --ff-sans-cond: "Barlow Condensed", sans-serif;
@@ -25,21 +25,21 @@
 
 @media (min-width: 35em) {
   :root {
-      --fs-900: 9.375rem;
-      --fs-800: 5rem;
-      --fs-700: 2.5rem;
-      --fs-600: 1.5rem;
-      --fs-400: 1rem;
+    --fs-900: 9.375rem;
+    --fs-800: 5rem;
+    --fs-700: 2.5rem;
+    --fs-600: 1.5rem;
+    --fs-400: 1rem;
   }
 }
 
 @media (min-width: 45em) {
   :root {
-      /* font-sizes */
-      --fs-800: 6.25rem;
-      --fs-700: 3.5rem;
-      --fs-600: 2rem;
-      --fs-400: 1.125rem;
+    /* font-sizes */
+    --fs-800: 6.25rem;
+    --fs-700: 3.5rem;
+    --fs-600: 2rem;
+    --fs-400: 1.125rem;
   }
 }
 
@@ -92,7 +92,7 @@ body {
   background-color: hsl(var(--clr-dark));
   color: hsl(var(--clr-white));
   line-height: 1.5;
-  min-height: 100vh;
+  min-height: 100svh;
 }
 
 /* Make imges easier to work with */

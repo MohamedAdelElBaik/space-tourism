@@ -16,7 +16,6 @@ function ArticleContent({ children }) {
       className="flex text-light"
       style={{
         flexDirection: "column",
-        width: "30rem",
       }}
     >
       {children}
