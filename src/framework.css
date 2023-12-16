@@ -6,21 +6,41 @@
   --clr-dark: 230 35% 7%;
   --clr-light: 231 77% 90%;
   --clr-white: 0 0% 100%;
-
-  /* Font Sizes */
-  --fs-900: 9.375rem;
-  --fs-800: 6.25rem;
-  --fs-700: 2.35rem;
-  --fs-600: 2rem;
+  
+  /* font-sizes */
+  --fs-900: 5rem;
+  --fs-800: 3.5rem;
+  --fs-700: 1.5rem;
+  --fs-600: 1rem;
   --fs-500: 1.75rem;
-  --fs-400: 1.125rem;
+  --fs-400: 0.9375rem;
   --fs-300: 1rem;
   --fs-200: 0.875rem;
+  
+  /* font-families */
+  --ff-serif: "Bellefair", serif;
+  --ff-sans-cond: "Barlow Condensed", sans-serif;
+  --ff-sans-normal: "Barlow", sans-serif;
+}
 
-  /* Font Family */
-  --ff-serif: "Bellefair", "serif";
-  --ff-sans-normal: "Barlow", "sans-serif";
-  --ff-sans-cond: "Barlow Condensed", "sans-serif";
+@media (min-width: 35em) {
+  :root {
+      --fs-900: 9.375rem;
+      --fs-800: 5rem;
+      --fs-700: 2.5rem;
+      --fs-600: 1.5rem;
+      --fs-400: 1rem;
+  }
+}
+
+@media (min-width: 45em) {
+  :root {
+      /* font-sizes */
+      --fs-800: 6.25rem;
+      --fs-700: 3.5rem;
+      --fs-600: 2rem;
+      --fs-400: 1.125rem;
+  }
 }
 
 /* ----------------------------- */
@@ -57,6 +77,12 @@ h5,
 h6,
 p {
   font-weight: 400;
+}
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
 }
 
 /* Set up the body */
@@ -280,7 +306,7 @@ button {
 
 .underline-indicators > * {
   cursor: pointer;
-  padding: var(--underline-gap, 2rem) 0.3rem;
+  padding: var(--underline-gap, 2rem) 0;
   border-bottom: 2px solid hsl(var(--clr-white) / 0);
   transition: border-color 0.5s ease;
 }
