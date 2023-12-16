@@ -3,8 +3,8 @@ import { useState } from "react";
 
 const navItems = data.destinations.map((item) => item.name);
 
-function DestinationContent() {
-  const [navResult, setNavResult] = useState(navItems[1]);
+function Destination() {
+  const [navResult, setNavResult] = useState(navItems[0]);
   const contentDate = data.destinations.find((item) => item.name === navResult);
 
   return (
@@ -23,43 +23,33 @@ function DestinationContent() {
 }
 
 function Header({ children }) {
-  return (
-    <div className="flex" style={{ flexDirection: "column", "--gap": "6rem" }}>
-      {children}
-    </div>
-  );
+  return <section className="destination--head">{children}</section>;
 }
 
 function Title() {
   return (
-    <h1 className="numbered-title">
+    <h1 className="title numbered-title fs-500">
       <span>01 </span>pic your destiantion
     </h1>
   );
 }
 function Image({ contentDate }) {
   return (
-    <img
-      src={contentDate.images.png}
-      alt={contentDate.name}
-      style={{ paddingLeft: "5rem", width: "30rem" }}
-    />
+    <div className="image-container">
+      <img src={contentDate.images.png} alt={contentDate.name} />
+    </div>
   );
 }
 
 function Container({ children }) {
-  return (
-    <div style={{ width: "450px" }} className="grid">
-      {children}
-    </div>
-  );
+  return <div className="destination--content grid">{children}</div>;
 }
 
 function Nav({ navResult, setNavResult }) {
   return (
     <nav>
       <ul
-        className="lsn text-light flex underline-indicators uppercase"
+        className="destination--nav lsn text-light flex underline-indicators uppercase"
         style={{ "--underline-gap": "0.5em" }}
       >
         {navItems.map((item) => (
@@ -77,30 +67,31 @@ function Nav({ navResult, setNavResult }) {
 
 function Content({ contentDate }) {
   return (
-    <article className="flow" style={{ "--flow-space": "1rem" }}>
+    <article className="flow" style={{ "--flow-space": "2rem" }}>
       <h2 className="uppercase fs-800 ff-serif">{contentDate.name}</h2>
-      <p className="text-light">{contentDate.description}</p>
+      <p className="text-box text-light">{contentDate.description}</p>
       <hr
         style={{
-          border: "2px solid hsl(var(--clr-dark)/0.75)",
+          border: "1px solid hsl(var(--clr-light)/0.25)",
           borderRadius: "10%",
         }}
       />
-      <div
-        className="flex uppercase"
-        style={{ justifyContent: "space-between" }}
-      >
+      <div className="details uppercase">
         <div>
           <h3 className="fs-200 ff-sans-cond text-light">Avg. distance</h3>
-          <p className="fs-500 ff-serif">{contentDate.distance}</p>
+          <p className="fs-500 ff-serif" style={{ fontSize: "1.75em" }}>
+            {contentDate.distance}
+          </p>
         </div>
         <div>
           <h3 className="fs-200 ff-sans-cond text-light">Est. travel time</h3>
-          <p className="fs-500 ff-serif">{contentDate.travel}</p>
+          <p className="ff-serif" style={{ fontSize: "1.75em" }}>
+            {contentDate.travel}
+          </p>
         </div>
       </div>
     </article>
   );
 }
 
-export default DestinationContent;
+export default Destination;

@@ -7,7 +7,7 @@ function Nav({ navResult, setNavResult }) {
   ];
 
   return (
-    <nav className="nav-bar-container fs--300">
+    <nav className="nav-bar-container ">
       <List>
         {listItemContent.map((item) => (
           <ListItem
@@ -25,7 +25,9 @@ function Nav({ navResult, setNavResult }) {
 
 function List({ children }) {
   return (
-    <ul className="nav-bar underline-indicators uppercase lsn">{children}</ul>
+    <ul className="nav-bar underline-indicators uppercase lsn fs-300">
+      {children}
+    </ul>
   );
 }
 
