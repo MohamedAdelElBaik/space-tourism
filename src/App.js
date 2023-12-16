@@ -3,6 +3,7 @@ import logo from "./images/group-2.svg";
 import Nav from "./components/Nav";
 import { useState } from "react";
 import HomeContent from "./components/HomeContent";
+import DestinationContent from "./components/Destination/Destination";
 
 function App() {
   const [navResult, setNavResult] = useState("home");
@@ -11,9 +12,14 @@ function App() {
     <div className="app">
       <Header>
         <Logo />
-        <Nav setNavResult={setNavResult} />
+        <Nav navResult={navResult} setNavResult={setNavResult} />
       </Header>
-      {navResult === "home" && <HomeContent />}
+      <Section>
+        {navResult === "home" && <HomeContent />}
+        {navResult === "destination" && <DestinationContent />}
+        {navResult === "crew" && <h1>Not Yet</h1>}
+        {navResult === "technology" && <h1>Not Yet</h1>}
+      </Section>
     </div>
   );
 }
@@ -35,6 +41,10 @@ function Logo() {
       <img className="nav--logo" src={logo} alt="logo"></img>
     </div>
   );
+}
+
+function Section({ children }) {
+  return <section className="page--content">{children}</section>;
 }
 
 export default App;

@@ -1,26 +1,12 @@
 function HomeContent() {
   return (
-    <Section>
+    <>
       <ArticleContent>
         <Header />
         <Paragraph />
       </ArticleContent>
       <ExploreButton />
-    </Section>
-  );
-}
-
-function Section({ children }) {
-  return (
-    <section
-      className="home--content flex"
-      style={{
-        alignItems: "center",
-        justifyContent: "space-between",
-      }}
-    >
-      {children}
-    </section>
+    </>
   );
 }
 
