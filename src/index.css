@@ -32,6 +32,14 @@
 }
 .app--header--logo {
   margin-inline: 2.5rem;
+  width: 3rem;
+}
+
+@media (max-width: 35rem) {
+  .app--header--logo {
+    margin-top: 1rem;
+    width: 2.5rem;
+  }
 }
 
 @media (min-width: 50rem) {
@@ -74,13 +82,11 @@
   display: none;
 }
 
+.nav-bar {
+  display: none;
+}
+
 @media (max-width: 35rem) {
-  .nav-bar {
-    display: none;
-    justify-content: space-evenly;
-    list-style: none;
-    background-color: hsl(var(--clr-white) / 0.08);
-  }
   .nav-bar.active {
     position: absolute;
     display: flex;

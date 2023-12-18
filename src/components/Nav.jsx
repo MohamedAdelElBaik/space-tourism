@@ -52,7 +52,7 @@ function List({ children, isNavOpen }) {
     <ul
       className={`nav-bar ${
         isNavOpen ? "active" : ""
-      } underline-indicators pointer uppercase lsn fs-400`}
+      } underline-indicators mob pointer uppercase lsn fs-400`}
     >
       {children}
     </ul>
