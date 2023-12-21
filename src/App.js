@@ -2,7 +2,7 @@ import "./index.css";
 import logo from "./images/group-2.svg";
 import Nav from "./components/Nav";
 import { useState } from "react";
-import Home from "./components/Home";
+import Home from "./components/Home/Home";
 import Destination from "./components/Destination/Destination";
 import Crew from "./components/Crew/Crew";
 
