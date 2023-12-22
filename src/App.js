@@ -26,12 +26,12 @@ function App() {
         <Logo />
         <Nav navResult={navResult} setNavResult={setNavResult} />
       </Header>
-      <Section className={navResult}>
+      <Main className={navResult}>
         {navResult === "home" && <Home />}
         {navResult === "destination" && <Destination />}
         {navResult === "crew" && <Crew />}
         {navResult === "technology" && <Technology />}
-      </Section>
+      </Main>
     </div>
   );
 }
@@ -48,16 +48,15 @@ function Logo() {
   );
 }
 
-function Section({ children, className }) {
+function Main({ children, className }) {
   let classRes = "app--content";
   if (className === "crew") classRes = "crew";
   if (className === "technology") classRes = "technology";
 
   return (
-    <section className={`${classRes} flow`} style={{ "--flow-space": "2em" }}>
-      {console.log(className)}
+    <main className={`${classRes} flow`} style={{ "--flow-space": "2em" }}>
       {children}
-    </section>
+    </main>
   );
 }
 

@@ -68,7 +68,9 @@ function ListItem({ children, num, setNavResult, className, setIsNavOpen }) {
         setIsNavOpen((res) => !res);
       }}
     >
-      <span className="nav-bar--item--num mar-r">0{num}</span>
+      <span className="nav-bar--item--num mar-r" aria-hidden={true}>
+        0{num}
+      </span>
       {children}
     </li>
   );
