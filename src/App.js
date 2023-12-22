@@ -5,9 +5,10 @@ import { useState } from "react";
 import Home from "./components/Home/Home";
 import Destination from "./components/Destination/Destination";
 import Crew from "./components/Crew/Crew";
+import Technology from "./components/Technology/Technology";
 
 function App() {
-  const [navResult, setNavResult] = useState("crew");
+  const [navResult, setNavResult] = useState("technology");
 
   let device = "desktop";
   // const windowWidth = Number(window.innerWidth);
@@ -29,7 +30,7 @@ function App() {
         {navResult === "home" && <Home />}
         {navResult === "destination" && <Destination />}
         {navResult === "crew" && <Crew />}
-        {navResult === "technology" && <h1>Not Yet</h1>}
+        {navResult === "technology" && <Technology />}
       </Section>
     </div>
   );
@@ -48,11 +49,13 @@ function Logo() {
 }
 
 function Section({ children, className }) {
+  let classRes = "app--content";
+  if (className === "crew") classRes = "crew";
+  if (className === "technology") classRes = "technology";
+
   return (
-    <section
-      className={`${className !== "crew" && "app--content"} ${className} flow`}
-      style={{ "--flow-space": "2em" }}
-    >
+    <section className={`${classRes} flow`} style={{ "--flow-space": "2em" }}>
+      {console.log(className)}
       {children}
     </section>
   );
