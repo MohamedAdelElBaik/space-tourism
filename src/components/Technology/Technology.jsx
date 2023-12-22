@@ -52,9 +52,10 @@ function Content({ data }) {
 
 function Image({ data }) {
   return (
-    <div className="technology--image">
+    <picture className="technology--image">
+      <source media="(max-width: 50rem)" srcSet={data.images.landscape} />
       <img src={data.images.portrait} alt={data.name} />
-    </div>
+    </picture>
   );
 }
 
